@@ -1,4 +1,4 @@
-# TxManager
+# TxManager(v2.0.1)
 TxManager是LCN分布式事务框架的事务协调器，框架基于Netty做消息通讯，事务控制数据存储在Redis中。
 
 ## 使用教程
@@ -8,23 +8,33 @@ TxManager是LCN分布式事务框架的事务协调器，框架基于Netty做消
 2. 配置application.properties文件
 
 ```
-#redis ip
-redis.ip=127.0.0.1
+#redis
+#redis主机地址
+spring.redis.hostName=127.0.0.1
 
-#redis port
-redis.port = 6379
+#redis主机端口
+spring.redis.port=6379
+#redis链接密码
+spring.redis.password=
 
-#redis密码 （注意：密码需要时去掉添加即可）
-#redis.auth=password
+spring.redis.pool.maxActive=10
+spring.redis.pool.maxWait=-1
+spring.redis.pool.maxIdle=5
+spring.redis.pool.minIdle=0
+spring.redis.timeout=0
 
-# 该参数可忽略，无需配置 -start
+#服务端口
+server.port=8030
+spring.application.name=tx-manager
 
-#服务端口 （该参数可忽略，无需配置）
-server.port=8888
-spring.thymeleaf.prefix=classpath:/templates/
+spring.thymeleaf.prefix=classpath:/html/
 spring.thymeleaf.suffix=.html
 
-# 该参数可忽略，无需配置 -end
+eureka.instance.hostname=localhost
+eureka.client.serviceUrl.defaultZone=http://localhost:8030/eureka/
+eureka.client.registerWithEureka=false
+eureka.client.fetchRegistry=false
+
 
 #参与事务的最大等待时间（单位：秒） 所有参与分布式事务逻辑处理的最大等待时间
 transaction_wait_max_time = 5
@@ -54,7 +64,7 @@ slb.list = http://127.0.0.1:8889/#http://127.0.0.1:8810/
 
 ```
 
-3. 配置完成后启动tomcat。然后访问`http://127.0.0.1:8080/tx-manager-2.0.0-SNAPSHOT` 正常如下：
+3. 配置完成后启动tomcat。然后访问`http://127.0.0.1:8080/tx-manager-2.0.0-SNAPSHOT/index` 正常如下：
 
 ![ ](readme/tx-manager.png)
 
