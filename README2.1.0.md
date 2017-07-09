@@ -51,16 +51,22 @@ socket.max.connection=100
 
 ## 高可用配置
 
-1. 配置TM服务
+原理图:
+
+![ ](readme/district.png)
+
+1. 配置Redis集群
+
+2. 配置TM服务
 部署多分tm，然后修改各个配置文件的eureka.client.serviceUrl.defaultZone，指向各服务的tm地址中间用"，"分割。
 
 例如： http://192.168.1.101:8761/eureka/,http://192.168.1.102:8761/eureka/,http://192.168.1.103:8761/eureka/
 
-2. 配置nginx负载均衡
+3. 配置nginx负载均衡
 
 负载均衡TM服务。
 
-3. 修改个事务模块的配置文件为ngnix负载均衡的地址
+4. 修改各事务模块的tx.properties配置文件url地址参数为ngnix负载均衡的地址。
 
 [tx-manager源码](https://github.com/1991wangliang/tx-lcn/tree/master/tx-manager) 
 
