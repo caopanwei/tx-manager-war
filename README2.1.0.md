@@ -1,4 +1,4 @@
-# TxManager(v2.1.0 高可用版本)
+# TxManager(v2.1.1 高可用版本)
 TxManager是LCN分布式事务框架的事务协调器，框架基于Netty做消息通讯，事务控制数据存储在Redis中。
 
 ## 使用教程
