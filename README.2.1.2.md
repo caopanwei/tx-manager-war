@@ -69,7 +69,7 @@ defaultZone: http://localhost:8761/eureka/的8761要与server.port=8761端口相
 
 3. 配置完成后 `java -jar tx-manager-2.1.2-SNAPSHOT.jar ` 。然后访问`http://127.0.0.1:8761` 正常如下：
 
-![ ](readme/tx-manager.png)
+![ ](readme/tm2.1.2.png)
 
 
 ## 高可用配置
