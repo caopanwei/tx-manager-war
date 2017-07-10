@@ -7,7 +7,7 @@ TxManager是LCN分布式事务框架的事务协调器，框架基于Netty做消
 [2.0.X版本](/README2.0.1.md) 
 
 
-[2.1.0高可用版本](/README2.1.0.md) 
+[2.1.2高可用版本](/README2.1.2.md) 
 
 
 
