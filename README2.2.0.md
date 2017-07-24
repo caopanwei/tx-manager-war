@@ -1,6 +1,8 @@
 # TxManager(v2.2.0)
 TxManager是LCN分布式事务框架的事务协调器，框架基于Netty做消息通讯，事务控制数据存储在Redis中。
 
+[TxManager源码](https://github.com/1991wangliang/tx-lcn/tree/master/tx-manager) 
+
 ## 使用教程
 1. 启动redis服务
 
@@ -98,7 +100,6 @@ endpoints:
 
 4. 修改各事务模块的tx.properties配置文件url地址参数为nginx负载均衡的地址。
 
-[tx-manager源码](https://github.com/1991wangliang/tx-lcn/tree/master/tx-manager) 
 
 
 技术交流群：554855843
