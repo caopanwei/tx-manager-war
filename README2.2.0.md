@@ -5,7 +5,8 @@ TxManager是LCN分布式事务框架的事务协调器，框架基于Netty做消
 1. 启动redis服务
 
 
-2. 配置application.properties/bootstrap.yml文件（若配置文件与本机不一致或无法修改，请从源码install 创建jar）
+2. 配置application.properties/bootstrap.yml文件（若配置文件与本机不一致或无法修改，###请从源码install 创建jar ###）
+
 ```
 
 #服务端口
